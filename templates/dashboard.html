@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <style>
+
+        body {
+
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #667eea,
+                #764ba2
+            );
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+
+            background: white;
+
+            width: 400px;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+
+            color: #333;
+
+            margin-bottom: 10px;
+        }
+
+        p {
+
+            color: #666;
+
+            margin-bottom: 20px;
+        }
+
+        select {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border-radius: 8px;
+
+            border: 1px solid #ccc;
+
+            margin-top: 15px;
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 12px;
+
+            margin-top: 20px;
+
+            background: #6c63ff;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            background: #574bdb;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>
+            {{ translated_text }}
+        </h1>
+
+        <p>
+            Welcome, {{ user.username }}
+        </p>
+
+        <p>
+            Current Language:
+            <strong>{{ user.language }}</strong>
+        </p>
+
+        <form method="POST">
+
+            <select name="language">
+
+                <option value="English">
+                    English
+                </option>
+
+                <option value="Hindi">
+                    Hindi
+                </option>
+
+                <option value="Spanish">
+                    Spanish
+                </option>
+
+                <option value="French">
+                    French
+                </option>
+
+                <option value="Chinese">
+                    Chinese
+                </option>
+
+                <option value="Portuguese">
+                    Portuguese
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Change Language
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
